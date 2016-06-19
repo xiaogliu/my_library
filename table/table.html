@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> 表格 </title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/table.css">
+    <script src="js/table.js"></script>
+</head>
+<body>						 
+    <!--table-->
+    <div class="table-wrapper" >
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title"> 表格标题 </h3>
+                    </div>
+                    <div class="box-body">  
+                        <div class="btn-group btn-group-lg table-nav" >
+                            <button  id="refresh" type="button" class="btn bg-orange"><span class="glyphicon glyphicon-refresh"></span> 刷新</button>
+                            <button  id='addPark' type="button" class="btn bg-green"><span class="glyphicon glyphicon-pencil"></span> 添加</button>
+                            <button  id='deletePark' type="button" class="btn  bg-pink"><span class="glyphicon glyphicon glyphicon-trash"></span> 删除</button>
+                            <button  id='updatePark' type="button" class="btn bg-blue"><span class="glyphicon glyphicon-edit"></span> 更新</button>
+                            <button  id='uploadPic' type="button" class="btn  bg-purple"><span class="glyphicon glyphicon-cloud-upload"></span>上传图片</button>  	                		           			                		                	
+                        </div>
+                        <div class="pull-right" style="width:300px">
+                            <div class="input-group">	
+                                <div class="row">
+                                    <div class="col-md-3 " >
+                                        <label style="float:right;padding-top:6px" >检索</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" id="searchContent" >
+                                        <span class="input-group-btn">
+                                            <button  class="btn btn-default" style="display:none"type="button" id="searchButton">
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div><!-- /input-group -->	
+                        </div>
+                        <br/>   
+                        <br/>    	
+                        <div class="btn-group" >
+                            <button  id= "nienbitFull" type="button" class="btn"><span class="glyphicon glyphicon glyphicon-ok"></span> 全选 </button>
+                            <button  id= "ninebitNone" type="button" class="btn"><span class="glyphicon glyphicon glyphicon-remove"></span> 全不选 </button>
+                            <button  id= "ninebitReverse"type="button" class="btn"><span class="glyphicon glyphicon glyphicon-random"></span> 反选 </button>
+                        </div>
+                        <div>
+                            <div class="box-body">
+                                <table id="example1" class="table table-bordered table-striped table-hover">
+                                    <tr>
+                                        <th><span style=""><input type="checkbox" /></div></th>
+                                        <th ><span>Id<span></th>		
+                                        <th><span>名称<span></th>
+                                        <th><span>进出口数<span></th>
+                                        <th><span>车位数<span></th>
+                                        <th><span>剩余车位</span></th>
+                                        <th><span>计费(白天)</span></th>
+                                        <th><span>计费(晚上)</span></th>
+                                        <th><span>状态</span></th>
+                                        <th><span>免费</span></th>
+                                        <th><span>楼层</span></th>	
+                                        <th><span>类型</span></th>
+                                        <th><span>位置</span></th>
+                                        <th><span>日期</span></th>	
+                                        <th><span>图片</span></th>	
+                                    </tr>
+                                    <tbody id="parkBody">
+                                        <tr class="">
+                                            <td><input type="checkbox"></td>
+                                            <td>1</td><td>众彩物流园</td>
+                                            <td>2</td><td>2000</td>
+                                            <td>471</td><td data="0">0</td>
+                                            <td data="0">0</td>
+                                            <td data="0">
+                                                <button class="btn btn-success btn-block">可用</button>
+                                            </td>
+                                            <td data="0">
+                                                否
+                                            </td>
+                                            <td>1</td>
+                                            <td data="1">室外</td>
+                                            <td>江苏省-南京市-江宁区 东山街道大里社区</td>
+                                            <td>2016-05-26 14:58:11</td>
+                                            <td>暂无图片</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td><input type="checkbox"></td>
+                                            <td>3</td><td>众彩物流园</td>
+                                            <td>2</td><td>2000</td>
+                                            <td>471</td><td data="0">0</td>
+                                            <td data="0">0</td>
+                                            <td data="0">
+                                                <button class="btn btn-success btn-block">可用</button>
+                                            </td>
+                                            <td data="0">否</td>
+                                            <td>1</td>
+                                            <td data="1">室外</td>
+                                            <td>江苏省-南京市-江宁区 东山街道大里社区</td>
+                                            <td>2016-05-26 14:58:11</td>
+                                            <td>暂无图片</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td><input type="checkbox"></td>
+                                            <td>3</td><td>众彩物流园</td>
+                                            <td>2</td><td>2000</td>
+                                            <td>471</td><td data="0">0</td>
+                                            <td data="0">0</td>
+                                            <td data="0">
+                                                <button class="btn btn-danger btn-block">不可用</button>
+                                            </td>
+                                            <td data="0">否</td>
+                                            <td>1</td>
+                                            <td data="1">室外</td>
+                                            <td>江苏省-南京市-江宁区 东山街道大里社区</td>
+                                            <td>2016-05-26 14:58:11</td>
+                                            <td>暂无图片</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td><input type="checkbox"></td>
+                                            <td>3</td><td>众彩物流园</td>
+                                            <td>2</td><td>2000</td>
+                                            <td>471</td><td data="0">0</td>
+                                            <td data="0">0</td>
+                                            <td data="0">
+                                                <button class="btn btn-success btn-block">可用</button>
+                                            </td>
+                                            <td data="0">否</td>
+                                            <td>1</td>
+                                            <td data="1">室外</td>
+                                            <td>江苏省-南京市-江宁区 东山街道大里社区</td>
+                                            <td>2016-05-26 14:58:11</td>
+                                            <td>暂无图片</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-footer clearfix">
+                        <div id='pagination'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end table-->
+</body>
+</html>

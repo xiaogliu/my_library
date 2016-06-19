@@ -1,0 +1,39 @@
+body {
+    font-family:"Microsoft YaHei",微软雅黑; /* 设置字体为微软雅黑 */
+    font-size: 1.7em;
+}
+.table-wrapper {
+    padding: 2%;
+}
+.btn-group {
+    border-radius: 10px;
+}
+.bg-orange {
+    background-color: #FF851B;
+}
+.bg-green {
+    background-color: #16D25E;
+}
+.bg-pink {
+    background-color: #C416D1;
+}
+.bg-blue {
+    background-color: #168DD1;
+}
+.bg-purple {
+    background-color: #5516D1;
+}
+.table-nav button {
+    color: #FFF;
+}
+button:hover {
+    color: #E6E6E6;
+}
+table td, table th {
+    text-align: center;
+    vertical-align: middle !important;
+}
+table tr:hover {
+    background-color: #9CE8FF !important;
+}
+
