@@ -7,10 +7,15 @@
 /* width和height包含padding和border的尺寸*/
 * {box-sizing: border-box;}
 
-/* grid view具体样式 */
+img {max-width: 100%;}
+
+/* 清除浮动 */
 .row:after {content: ""; clear: both; display: block;}
+/* end */
+
 [class*="col-"] {float: left; padding: 15px;}
 
+/* 宽度小于768px的屏幕，优先加载 */
 .col-sm-12 {width: 100%;}
 .col-sm-11 {width: 91.66666667%;}
 .col-sm-10 {width: 83.33333333%;}
@@ -36,7 +41,9 @@
 .col-sm-offset-2 {margin-left: 16.66666667%;}
 .col-sm-offset-1 {margin-left: 8.33333333%;}
 .col-sm-offset-0 {margin-left: 0;}
+/* end */
 
+/* 宽度不小于768px的屏幕 */
 @media only screen and (min-width: 768px) {
   .col-lg-12 {width: 100%;}
   .col-lg-11 {width: 91.66666667%;}
@@ -64,3 +71,4 @@
   .col-lg-offset-1 {margin-left: 8.33333333%;}
   .col-lg-offset-0 {margin-left: 0;} 
 }
+/* end */
